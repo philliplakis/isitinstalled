@@ -1,0 +1,14 @@
+{
+  "name": "isitinstalled",
+  "version": "0.1.0",
+  "description": "Checks Windows systems for a program installed, returns True or False",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Phillip Lakis",
+  "license": "MIT",
+  "dependencies": {
+    "node-powershell": "^4.0.0"
+  }
+}
