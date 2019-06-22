@@ -1,19 +1,19 @@
 const Shell = require("node-powershell");
-const path = require("path");
 
 const ps = new Shell({
   executionPolicy: "Bypass",
   noProfile: true
 });
 
-const file = "./checkProgram.ps1";
+const file = `"${__dirname}\\checkProgram.ps1"`;
 
 const isItInstalled = function() {
   return new Promise(function(resolve, reject) {
-    ps.addCommand(file);
+    ps.addCommand(`& ${file}`);
 
     ps.invoke()
       .then(output => {
+        console.log(output);
         const x = JSON.parse(output);
         if (x === true) {
           return resolve(true);
@@ -22,6 +22,7 @@ const isItInstalled = function() {
         }
       })
       .catch(err => {
+        console.log(err);
         return reject(err);
       });
   });
