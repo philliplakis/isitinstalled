@@ -45,8 +45,7 @@ isItInstalled("Vs Code")
     mainWindow.loadURL(`500.html`);
   });
 ```
-
-# You can use this example to load a different window based on the results.
+You can use this example to load a different window based on the results.
 
 ```js
 isItInstalled("Vs Code")
