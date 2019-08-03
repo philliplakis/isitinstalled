@@ -5,7 +5,7 @@ isItInstalled is a promise Windows software check. Returns True or False.
 ## Install
 
 ```js
-$ npm install isItInstalled
+$ npm install isitinstalled
 ```
 
 ## API
@@ -21,6 +21,8 @@ This module was designed to be used with ElectronJS, If your desktop application
 ##### Simple Example
 
 ```js
+const isItInstalled = require("isitinstalled");
+
 isItInstalled("Vs Code").then(result => {
   if (result) {
     console.log("true");
@@ -33,6 +35,8 @@ isItInstalled("Vs Code").then(result => {
 ##### Electron Example
 
 ```js
+const isItInstalled = require("isitinstalled");
+
 isItInstalled("Vs Code")
   .then(result => {
     if (result) {
@@ -45,4 +49,5 @@ isItInstalled("Vs Code")
     mainWindow.loadURL(`500.html`);
   });
 ```
+
 You can use this example to load a different window based on the results.
