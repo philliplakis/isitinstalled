@@ -1,9 +1,9 @@
-const isItInstalled = require("./index");
+const isItInstalled = require("./");
 
-isItInstalled().then(result => {
+isItInstalled("stegam").then(result => {
   if (result) {
-    console.log("true");
+    console.log(result);
   } else {
-    console.warn("false");
+    console.warn(result);
   }
 });

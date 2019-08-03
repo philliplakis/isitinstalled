@@ -5,17 +5,16 @@ const ps = new Shell({
   noProfile: true
 });
 
-const file = `"${__dirname}\\checkProgram.ps1"`;
+const file = `"${__dirname}\\lib\\checkProgram.ps1"`;
 
-const isItInstalled = function() {
+const isItInstalled = function(program) {
   return new Promise(function(resolve, reject) {
-    ps.addCommand(`& ${file}`);
+    ps.addCommand(`& ${file} -Name ${program}`);
 
     ps.invoke()
       .then(output => {
-        console.log(output);
         const x = JSON.parse(output);
-        if (x === true) {
+        if (x) {
           return resolve(true);
         } else {
           return resolve(false);
