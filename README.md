@@ -46,19 +46,3 @@ isItInstalled("Vs Code")
   });
 ```
 You can use this example to load a different window based on the results.
-
-```js
-isItInstalled("Vs Code")
-  .then(result => {
-    if (result) {
-      mainWindow.loadURL(`index.html`);
-    } else {
-      mainWindow.loadURL(`error.html`);
-    }
-  })
-  .catch(err => {
-    mainWindow.loadURL(`500.html`);
-  });
-```
-
-You can use this example to load a different window based on the results.
