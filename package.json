@@ -10,5 +10,17 @@
   "license": "MIT",
   "dependencies": {
     "node-powershell": "^4.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/philliplakis/isitinstalled.git"
+  },
+  "keywords": [
+    "squarespace",
+    "api"
+  ],
+  "bugs": {
+    "url": "https://github.com/philliplakis/isitinstalled/issues"
+  },
+  "homepage": "https://github.com/philliplakis/isitinstalled/#readme"
 }
