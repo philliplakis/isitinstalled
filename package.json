@@ -16,7 +16,9 @@
     "url": "git+ssh://git@github.com/philliplakis/isitinstalled.git"
   },
   "keywords": [
-    "squarespace",
+    "windows",
+    "software check",
+    "powershell",
     "api"
   ],
   "bugs": {
